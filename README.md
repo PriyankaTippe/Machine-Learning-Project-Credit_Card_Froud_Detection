@@ -58,13 +58,15 @@ Applied StandardScaler for feature scaling.
 
 After fitting the Logistic Regression model, these changes were observed:
 
-Step	Change Observed	Reason / Impact
-✅ Model coefficients updated	Each feature (V1–V28, Amount) got a new weight	Shows how much each variable contributes to the prediction
-⚖️ Regularization applied (C parameter)	Controlled overfitting	Improved generalization on test data
-🔁 Convergence achieved after several iterations	Optimizer (LBFGS/SAGA) minimized log-loss	Ensured model stability
-📊 Improved recall for minority class (fraud)	After rebalancing / SMOTE	Helped detect more fraud cases
-🧮 Decision boundary adjusted	Shifted threshold closer to fraud side	Reduced false negatives
-📊 Model Evaluation
+| Step                                             | Change Observed                                    | Reason / Impact                                            |
+| ------------------------------------------------ | -------------------------------------------------- | ---------------------------------------------------------- |
+| ✅ Model coefficients updated                     | Each feature (`V1–V28`, `Amount`) got a new weight | Shows how much each variable contributes to the prediction |
+| ⚖️ Regularization applied (`C` parameter)        | Controlled overfitting                             | Improved generalization on test data                       |
+| 🔁 Convergence achieved after several iterations | Optimizer (LBFGS/SAGA) minimized log-loss          | Ensured model stability                                    |
+| 📊 Improved recall for minority class (fraud)    | After rebalancing / SMOTE                          | Helped detect more fraud cases                             |
+| 🧮 Decision boundary adjusted                    | Shifted threshold closer to fraud side             | Reduced false negatives                                    |
+
+
 
 Metrics obtained after training:
 
